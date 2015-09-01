@@ -43,6 +43,25 @@ NodeKits
     osgQt
 
 2. Compilation and Installation of OpenSceneGraph
+
+osgversion
+osgconv
+osgviewer
+    W wireframe
+    T texture
+    L lighting
+    F full-screen
+    S statistics
+
+Release
+    stable: even minor version number
+    un-stable: odd minor version number
+
+Common environment variables
+    OSG_FILE_PATH
+    OSG_NOTIFY_LEVEL
+    OSG_ROOT
+
 3. Creating Your First OSG Program
 4. Building Geometry Models
 5. Managing Scene Graph
