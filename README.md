@@ -1,1 +1,55 @@
-# osg3bg
+OpenSceneGraph 3.0 Beginner's Guide
+Rui Wang; Xuelei Qian
+Packt Publishing
+2010
+
+1. The Journey into OpenSceneGraph
+
+Retained (Deferred) vs Immediate rendering mode
+
+Scene Graph
+Root node
+Group node
+Child node
+Leaf node
+
+No directed cycle
+No orphan node
+
+1998 Don Burns
+1999 Robert Osfield
+2005 1.0
+2007 2.0
+2011 3.0
+
+Core libraries
+    OpenThreads
+    osg
+    osgDB
+    osgUtil
+NodeKits
+    osgAnimation
+    osgFX
+    osgGA
+    osgManipulator
+    osgParticle
+    osgShadow
+    osgSim
+    osgTerrain
+    osgText
+    osgViewer
+    osgVolumn
+    osgWidget
+    osgQt
+
+2. Compilation and Installation of OpenSceneGraph
+3. Creating Your First OSG Program
+4. Building Geometry Models
+5. Managing Scene Graph
+6. Creating Realistic Rendering Effects
+7. Viewing the World
+8. Animating Scene Objects
+9. Interacting with Outside Elements
+10. Saving and Loading Files
+11. Developing Visual Components
+12. Improving Rendering Efficiency
