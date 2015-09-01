@@ -63,6 +63,12 @@ Common environment variables
     OSG_ROOT
 
 3. Creating Your First OSG Program
+
+osg::Geode - geometry node - leaf
+    osg::Drawable
+        osg::ShapeDrawable (inefficient)
+        osg::Geometry
+
 4. Building Geometry Models
 5. Managing Scene Graph
 6. Creating Realistic Rendering Effects

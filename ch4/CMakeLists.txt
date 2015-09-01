@@ -1,0 +1,6 @@
+add_executable(ch4_1 ch4_1.cpp)
+link_to_library(ch4_1 OPENTHREADS)
+link_to_library(ch4_1 OSG)
+link_to_library(ch4_1 OSGDB)
+link_to_library(ch4_1 OSGUTIL)
+link_to_library(ch4_1 OSGVIEWER)
