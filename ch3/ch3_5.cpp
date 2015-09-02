@@ -7,20 +7,20 @@ class LogFileHandler : public osg::NotifyHandler
 public:
     LogFileHandler(const std::string& file)
     {
-        _log.open(file.c_str());
+        log_.open(file.c_str());
     }
     virtual ~LogFileHandler()
     {
-        _log.close();
+        log_.close();
     }
 
     virtual void notify(osg::NotifySeverity severity, const char* msg)
     {
-        _log << msg;
+        log_ << msg;
     }
 
 protected:
-    std::ofstream _log;
+    std::ofstream log_;
 };
 
 int main(
