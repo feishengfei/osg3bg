@@ -33,7 +33,7 @@ link_to_library(ch4_5 OSGDB)
 link_to_library(ch4_5 OSGUTIL)
 link_to_library(ch4_5 OSGVIEWER)
 
-find_package(glut)
+find_package(glut REQUIRED)
 add_executable(ch4_6 ch4_6.cpp)
 link_to_library(ch4_6 GLUT)
 link_to_library(ch4_6 OPENTHREADS)

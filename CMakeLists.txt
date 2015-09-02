@@ -1,11 +1,11 @@
 cmake_minimum_required(VERSION 2.6)
 project(osg3bg)
 
-find_package(OpenThreads)
-find_package(osg)
-find_package(osgDB)
-find_package(osgUtil)
-find_package(osgViewer)
+find_package(OpenThreads REQUIRED)
+find_package(osg REQUIRED)
+find_package(osgDB REQUIRED)
+find_package(osgUtil REQUIRED)
+find_package(osgViewer REQUIRED)
 
 macro(link_to_library PROJNAME LIBNAME)
     include_directories(${${LIBNAME}_INCLUDE_DIR})
