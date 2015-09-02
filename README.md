@@ -69,6 +69,22 @@ osg::Geode - geometry node - leaf
         osg::ShapeDrawable (inefficient)
         osg::Geometry
 
+osgUtil::Simplifier
+osgUtil::SmoothingVisitor
+osgUtil::TangentSpaceGenerator
+osgUtil::Tessellator
+osgUtil::TriStripVisitor
+
+osg::Drawable::AttributeFunctor
+osg::Drawable::ConstAttributeFunctor
+osg::PrimitiveFunctor
+osg::PrimitiveIndexFunctor
+
+osg::Drawable
+    computeBound()
+    drawImplementation()
+    setUseDisplayList()
+
 4. Building Geometry Models
 5. Managing Scene Graph
 6. Creating Realistic Rendering Effects
