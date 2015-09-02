@@ -1,4 +1,4 @@
-#include <glut.h>
+#include <GL/glut.h>
 #include <osg/Geode>
 #include <osg/Geometry>
 #include <osgViewer/Viewer>
@@ -27,10 +27,10 @@ public:
         return osg::BoundingBox(min, max);
     }
 
-    virtual void drawImplementation(const osg::RenderInfo& renderInfo) const
+    virtual void drawImplementation(osg::RenderInfo& /*renderInfo*/) const
     {
         //glDisable(GL_CULL_FACE);
-        //glFrontFace(GL_CW);
+        glFrontFace(GL_CW);
         glutSolidTeapot(size_);
         //glFrontFace(GL_CCW);
     }
