@@ -109,6 +109,9 @@ osg::MatrixTransform
 osg::PositionAttitudeTransform
 
 osg::Switch
+osg::Simplifier
+
+osg::LOD
 
 6. Creating Realistic Rendering Effects
 7. Viewing the World
