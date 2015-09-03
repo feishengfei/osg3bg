@@ -103,9 +103,12 @@ OSG uses row-major matrix.
 
 osg::Node
 osg::Group
+
 osg::Transform
 osg::MatrixTransform
 osg::PositionAttitudeTransform
+
+osg::Switch
 
 6. Creating Realistic Rendering Effects
 7. Viewing the World
