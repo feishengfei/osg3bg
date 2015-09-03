@@ -86,7 +86,27 @@ osg::Drawable
     setUseDisplayList()
 
 4. Building Geometry Models
+
 5. Managing Scene Graph
+
+Depth first traversal
+    event
+    update
+    cull
+    draw
+
+Reference frame
+    relative
+    absolute
+
+OSG uses row-major matrix.
+
+osg::Node
+osg::Group
+osg::Transform
+osg::MatrixTransform
+osg::PositionAttitudeTransform
+
 6. Creating Realistic Rendering Effects
 7. Viewing the World
 8. Animating Scene Objects
