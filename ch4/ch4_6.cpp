@@ -22,15 +22,15 @@ public:
 
     virtual osg::BoundingBox computeBoundingBox() const
     {
-        osg::Vec3 min(-size_, -size_, -size_);
-        osg::Vec3 max( size_,  size_,  size_);
+        const float size = size_ * 2;
+        osg::Vec3 min(-size, -size, -size);
+        osg::Vec3 max( size,  size,  size);
         return osg::BoundingBox(min, max);
     }
 
     virtual void drawImplementation(osg::RenderInfo& /*renderInfo*/) const
     {
-        //glDisable(GL_CULL_FACE);
-        glFrontFace(GL_CW);
+        //glFrontFace(GL_CW);
         glutSolidTeapot(size_);
         //glFrontFace(GL_CCW);
     }
