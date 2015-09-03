@@ -170,6 +170,21 @@ osg::Camera
     Other
         setRenderOrder()
 
+osgViewer::Viewer
+    run()
+        manipulate camera
+        modify graphics context
+        render frame
+    realize()
+        initialize graphics context
+        initialize resources
+        initialize threads
+
+OSG_WINDOW
+setUpViewInWindow()
+setUpViewOnSingleScreen()
+setUpViewFor3dSphericalDisplay()
+
 8. Animating Scene Objects
 9. Interacting with Outside Elements
 10. Saving and Loading Files
