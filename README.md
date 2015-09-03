@@ -198,6 +198,10 @@ osg::GraphicsContext
 
 8. Animating Scene Objects
 9. Interacting with Outside Elements
+
+osg::GraphicsContext::createGraphicsContext()
+osg::GraphicsContext::Traits
+
 10. Saving and Loading Files
 11. Developing Visual Components
 12. Improving Rendering Efficiency
