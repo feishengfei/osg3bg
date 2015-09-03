@@ -185,6 +185,8 @@ setUpViewInWindow()
 setUpViewOnSingleScreen()
 setUpViewFor3dSphericalDisplay()
 
+osgViewer::CompositeViewer
+
 8. Animating Scene Objects
 9. Interacting with Outside Elements
 10. Saving and Loading Files
