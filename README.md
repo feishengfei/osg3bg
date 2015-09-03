@@ -187,6 +187,15 @@ setUpViewFor3dSphericalDisplay()
 
 osgViewer::CompositeViewer
 
+osg::DisplaySettings
+    instance()
+    setDoubleBuffer()
+    setDepthBuffer()
+    setMinimumNumAlphaBits()
+    setNumMultiSamples()
+    stereo mode
+osg::GraphicsContext
+
 8. Animating Scene Objects
 9. Interacting with Outside Elements
 10. Saving and Loading Files
