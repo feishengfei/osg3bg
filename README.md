@@ -112,6 +112,9 @@ osg::Switch
 osg::Simplifier
 
 osg::LOD
+osg::ProxyNode
+osg::PagedLOD
+osg::DatabasePager
 
 6. Creating Realistic Rendering Effects
 7. Viewing the World
