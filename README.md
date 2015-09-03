@@ -117,6 +117,21 @@ osg::PagedLOD
 osg::DatabasePager
 
 6. Creating Realistic Rendering Effects
+
+OpenGL state machine
+    attributes
+    modes
+
+osg::StateSet
+    Non-texture
+        setAttribute()
+        setMode()
+        setAttributeAndModes()
+    Texture
+        setTextureAttribute()
+        setTextureMode()
+        setTextureAttributeAndModes()
+
 7. Viewing the World
 8. Animating Scene Objects
 9. Interacting with Outside Elements
