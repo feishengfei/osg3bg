@@ -21,6 +21,7 @@ int main(
     osg::ref_ptr<osg::Camera> camera = new osg::Camera;
     camera->setGraphicsContext(gc.get());
     camera->setViewport(0, 0, traits->width, traits->height);
+    camera->getOrCreateStateSet()->setMode(GL_DEPTH_TEST, osg::StateAttribute::ON);
     camera->setClearMask(GL_DEPTH_BUFFER_BIT | GL_COLOR_BUFFER_BIT);
     camera->setClearColor(osg::Vec4(0.2f, 0.2f, 0.4f, 1.0f));
     camera->setProjectionMatrixAsPerspective(
