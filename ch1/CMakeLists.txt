@@ -1,6 +1,1 @@
-add_executable(ch1 ch1.cpp)
-link_to_library(ch1 OPENTHREADS)
-link_to_library(ch1 OSG)
-link_to_library(ch1 OSGDB)
-link_to_library(ch1 OSGUTIL)
-link_to_library(ch1 OSGVIEWER)
+add_executable_with_core_libraries(ch1)
