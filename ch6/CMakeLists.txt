@@ -1,2 +1,3 @@
 add_executable_with_core_libraries(ch6_1)
 add_executable_with_core_libraries(ch6_2)
+add_executable_with_core_libraries(ch6_3)
