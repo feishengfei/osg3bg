@@ -8,6 +8,7 @@ find_package(osg REQUIRED)
 find_package(osgDB REQUIRED)
 find_package(osgUtil REQUIRED)
 find_package(osgViewer REQUIRED)
+find_package(osgGA REQUIRED)
 
 macro(link_to_library PROJNAME LIBNAME)
     include_directories(${${LIBNAME}_INCLUDE_DIR})
