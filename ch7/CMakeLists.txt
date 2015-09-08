@@ -6,3 +6,4 @@ link_to_library(ch7_2 OSGGA)
 
 add_executable_with_core_libraries(ch7_3)
 add_executable_with_core_libraries(ch7_4)
+add_executable_with_core_libraries(ch7_5)
