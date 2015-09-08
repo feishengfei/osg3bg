@@ -138,24 +138,38 @@ Object Space (right-handed)
     Modeling Transform
 World Space (right-handed)
     View Transform
-Eye Space
+Eye Space (right-handed)
     Projection Transform
-Clip Space
+Clip Space (left-handed)
     Perspective Divide
 Normalized Device Space (left-handed)
     View and Depth Range Transform
 Window Space (left-handed)
 
+Model-View matrix
+    Move scene: model matrix
+        glTranslate(), glRotate()
+        osg::MatrixTransform, osg::PositionAttitudeTransform
+    Move camera: view matrix
+        gluLookAt()
+        osg::Camera
+    Combined
+        glMultMatrix()
+        osg::Transform
+
 osg::Camera
     Matrix and viewport
-        setViewMatrix()
-        setViewMatrixAsLookAt()
-        setProjectionMatrix()
-        setProjectionMatrixAsFrustum()
-        setProjectionMatrixAsOrtho()
-        setProjectionMatrixAsOrtho2D()
-        setProjectionMatrixAsPerspective()
-        setViewport()
+        View matrix
+            setViewMatrix()
+            setViewMatrixAsLookAt()
+        Projection matrix
+            setProjectionMatrix()
+            setProjectionMatrixAsFrustum()
+            setProjectionMatrixAsOrtho()
+            setProjectionMatrixAsOrtho2D()
+            setProjectionMatrixAsPerspective()
+        Viewport
+            setViewport()
     Clear
         setClearMask()
         setClearColor()
