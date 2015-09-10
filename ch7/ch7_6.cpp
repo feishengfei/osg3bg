@@ -10,6 +10,7 @@ public:
     FindTextureVisitor(osg::Texture* tex)
         : texture_(tex)
     {
+        setTraversalMode(osg::NodeVisitor::TRAVERSE_ALL_CHILDREN);
     }
 
     virtual void apply(osg::Node& node)
@@ -76,23 +77,29 @@ int main(
     camera->setReferenceFrame(osg::Camera::ABSOLUTE_RF);
     camera->addChild(sub_model);
 
+    osg::ref_ptr<osg::Group> root = new osg::Group;
+    root->addChild(camera.get());
+    root->addChild(model.get());
+
     osgViewer::Viewer viewer;
-    viewer.setSceneData(model.get());
+    viewer.setSceneData(root.get());
     viewer.setCameraManipulator(new osgGA::TrackballManipulator);
 
-    float delta = 0.1f;
+    float range = 0.25f;
+    float speed = range / 50;
+    float delta = speed;
     float bias = 0.0f;
     osg::Vec3 eye(0.0f, -5.0f, 5.0f);
 
     while (!viewer.done())
     {
-        if (bias < -1.0f)
+        if (bias < -range)
         {
-            delta = 0.1f;
+            delta = speed;
         }
-        else if (bias > 1.0f)
+        else if (bias > range)
         {
-            delta = -0.1f;
+            delta = -speed;
         }
         bias += delta;
 
