@@ -218,4 +218,10 @@ osg::GraphicsContext::Traits
 
 10. Saving and Loading Files
 11. Developing Visual Components
+
+osg::Billboard
+    setMode()
+    addChild()
+    setNormal()
+
 12. Improving Rendering Efficiency

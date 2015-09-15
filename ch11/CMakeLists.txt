@@ -1,0 +1,1 @@
+add_executable_with_core_libraries(ch11_1)
