@@ -2,3 +2,6 @@ add_executable_with_core_libraries(ch11_1)
 
 add_executable_with_core_libraries(ch11_2)
 link_to_library(ch11_2 OSGTEXT)
+
+add_executable_with_core_libraries(ch11_3)
+link_to_library(ch11_3 OSGTEXT)
