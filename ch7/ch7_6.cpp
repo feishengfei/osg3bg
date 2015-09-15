@@ -69,7 +69,7 @@ int main(
 
     osg::ref_ptr<osg::Camera> camera = new osg::Camera;
     camera->setViewport(0, 0, tex_width, tex_height);
-    camera->setClearColor(osg::Vec4(1.0f, 1.0f, 1.0f, 1.0f));
+    camera->setClearColor(osg::Vec4(1.0f, 1.0f, 1.0f, 0.0f));
     camera->setClearMask(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     camera->setRenderOrder(osg::Camera::PRE_RENDER);
     camera->setRenderTargetImplementation(osg::Camera::FRAME_BUFFER_OBJECT);
