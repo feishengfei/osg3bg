@@ -224,4 +224,10 @@ osg::Billboard
     addChild()
     setNormal()
 
+osgText::Text
+    setFont()
+    setPosition()
+    setCharacterSize()
+    setText()
+
 12. Improving Rendering Efficiency
