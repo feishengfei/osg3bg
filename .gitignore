@@ -28,3 +28,10 @@
 *.app
 
 /build
+*.log
+tags
+.*.swp
+.*.swo
+/bin
+/osg3bg*
+*.deb

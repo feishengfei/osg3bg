@@ -9,8 +9,7 @@ struct FaceCollector
     void operator()(
         const osg::Vec3& v1,
         const osg::Vec3& v2,
-        const osg::Vec3& v3,
-        bool)
+        const osg::Vec3& v3)
     {
         std::cout << "Face vertices: "
             << v1.x() << " " << v1.y() << " " << v1.z() << "; "

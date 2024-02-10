@@ -11,6 +11,13 @@ find_package(osgText REQUIRED)
 find_package(osgUtil REQUIRED)
 find_package(osgViewer REQUIRED)
 
+if(CMAKE_BUILD_TYPE STREQUAL "Release")
+    set(CMAKE_STRIP_COMMAND "strip")
+    set(CMAKE_STRIP "strip")
+else()
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g ")
+endif()
+
 macro(link_to_library PROJNAME LIBNAME)
     include_directories(${${LIBNAME}_INCLUDE_DIR})
     target_link_libraries(${PROJNAME} ${${LIBNAME}_LIBRARY})
@@ -23,6 +30,14 @@ macro(add_executable_with_core_libraries EXECUTABLE)
     link_to_library(${EXECUTABLE} OSGDB)
     link_to_library(${EXECUTABLE} OSGUTIL)
     link_to_library(${EXECUTABLE} OSGVIEWER)
+    set_target_properties(${EXECUTABLE} PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/bin/")
+    install(TARGETS ${EXECUTABLE} DESTINATION ${CMAKE_INSTALL_PREFIX}/bin)
+    if(CMAKE_BUILD_TYPE STREQUAL "Release")
+        add_custom_command(TARGET ${EXECUTABLE} POST_BUILD
+            COMMAND ${CMAKE_STRIP} $<TARGET_FILE:${EXECUTABLE}>
+            COMMENT "Stripping ${EXECUTABLE}"
+        )
+    endif()
 endmacro()
 
 add_subdirectory(ch1)
