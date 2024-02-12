@@ -3,6 +3,8 @@
 #include <osg/Geometry>
 #include <osg/TriangleFunctor>
 #include <osgViewer/Viewer>
+#include <osgViewer/ViewerEventHandlers>
+#include <osgGA/StateSetManipulator>
 
 struct FaceCollector
 {
@@ -51,5 +53,10 @@ int main(
 
     osgViewer::Viewer viewer;
     viewer.setSceneData(root.get());
+    viewer.addEventHandler(new osgViewer::StatsHandler());
+    viewer.addEventHandler(new osgViewer::WindowSizeHandler());
+    viewer.addEventHandler(new osgGA::StateSetManipulator(
+        viewer.getCamera()->getOrCreateStateSet()
+    ));
     return viewer.run();
 }
