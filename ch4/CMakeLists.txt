@@ -5,6 +5,9 @@ add_executable_with_core_libraries(ch4_3_pyramid)
 add_executable_with_core_libraries(ch4_4)
 add_executable_with_core_libraries(ch4_5)
 
+add_executable_with_core_libraries(ch4_2_texture)
+target_link_libraries(ch4_2_texture utils)
+
 find_package(FreeGLUT REQUIRED)
 add_executable_with_core_libraries(ch4_6)
 link_to_library(ch4_6 FREEGLUT)

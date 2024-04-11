@@ -1,0 +1,2 @@
+const char * source_dir = "${CMAKE_SOURCE_DIR}";
+const char * prefix_dir = "${CMAKE_INSTALL_PREFIX}";

@@ -28,6 +28,7 @@
 *.app
 
 /build
+/configuration/root_directory.h
 *.log
 tags
 .*.swp
