@@ -1,0 +1,18 @@
+Source: osg3bg
+Section: devel
+Priority: optional
+Maintainer: felix <feishengfei@126.com>
+Build-Depends: cmake,
+    debhelper,
+    g++ (>= 6.0.0),
+    freeglut3-dev,
+    libopenscenegraph-dev (>= 3.6.4),
+    libopenthreads-dev (>= 3.6.4)
+Standards-Version: 4.5.0
+Homepage: https://github.com/feishengfei/osg3bg.git
+
+Package: osg3bg
+Architecture: any
+Multi-Arch: foreign
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: OpenSceneGraph 3.0 Beginners Guide demos

@@ -1,0 +1,5 @@
+osg3bg (0.0.1-1) unstable; urgency=low
+
+  * support debuild
+
+ -- felix <feishengfei@126.com>  Thu, 11 Apr 2024 09:05:43 +0800

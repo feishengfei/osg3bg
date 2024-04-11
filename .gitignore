@@ -29,6 +29,10 @@
 
 /build
 /configuration/root_directory.h
+/debian/files
+/debian/.debhelper/
+/debian/osg3bg*
+/debian/debhelper-build-stamp
 *.log
 tags
 .*.swp

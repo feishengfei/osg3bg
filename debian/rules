@@ -1,0 +1,39 @@
+#!/usr/bin/make -f
+export DH_VERBOSE = 1
+PARALLEL_JOBS = $(shell nproc)
+
+DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
+
+include /usr/share/dpkg/pkg-info.mk
+
+%:
+	dh $@
+
+override_dh_clean:
+	$(RM) -rf build/
+
+override_dh_auto_configure:
+	dh_auto_configure --builddirectory=build -- \
+		-DCMAKE_CXX_FLAGS="-std=c++11" \
+		-DCMAKE_VERBOSE_MAKEFILE=1 \
+		-DCMAKE_INSTALL_PREFIX=/usr \
+		-DDEB_HOST_MULTIARCH=$(DEB_HOST_MULTIARCH) \
+		-DLIB_POSTFIX="" \
+		-DCMAKE_BULID_TYPE=RelWithDebInfo \
+		-DCMAKE_C_FLAGS="" \
+		-DCMAKE_EXE_LINKER_FLAGS="" \
+		-DCMAKE_MODULE_LINKER_FLAGS="" \
+		-DCMAKE_SHARED_LINKER_FLAGS="" \
+		-DMNN_PORTABLE_BUILD=ON
+
+override_dh_auto_build:
+	dh_auto_build --builddirectory=build -- -j $(PARALLEL_JOBS)
+
+override_dh_auto_install:
+	dh_auto_install --builddirectory=build
+
+override_dh_install:
+	dh_install --autodest --list-missing
+
+override_dh_shlibdeps:
+	dh_shlibdeps --dpkg-shlibdeps-params=--ignore-missing-info
